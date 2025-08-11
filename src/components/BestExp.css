@@ -1,0 +1,73 @@
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    max-width: 70%;
+    margin: 0 auto;
+
+}
+
+.category-section {
+    background-color: #ffffff;
+    border: 1.5px solid #007bff;
+    border-radius: 10px;
+    padding: 18px 16px;
+    box-shadow: 0 4px 14px rgba(0, 123, 255, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+
+}
+
+.category-section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 123, 255, 0.12);
+}
+
+.category-title {
+    font-size: 30px;
+    margin-bottom: 8px;
+    color: #007bff;
+    border-left: 3px solid #007bff;
+    padding-left: 8px;
+}
+
+.experience-grid p {
+    font-size: 18px;
+    font-weight: normal;
+    color: #555;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    padding-top: 20px;
+}
+
+.experience-grid ul {
+    margin: 0;
+
+}
+
+.experience-grid li {
+    margin-bottom: 6px;
+    font-size: 18px;
+    color: #333;
+    list-style-type: disc;
+    transition: color 0.2s ease;
+}
+
+.attraction-item:hover {
+    color: #0056b3;
+}
+.suggestion {
+   text-align: left;
+    padding-left: 8px;
+    padding-top: 8px;
+
+}
+.suggestion h4 {
+    font-size: 18px;
+    display: inline-block; /* Keeps line just under the text, not full width */
+    border-bottom: 2px solid #000; /* Line thickness & color */
+    padding-bottom: 4px; /* Spacing between text and line */
+    margin-bottom: 6px;
+    text-align: left;
+}
