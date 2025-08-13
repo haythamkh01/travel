@@ -14,8 +14,11 @@ import CityPage from "./components/CityPage";
 import SingleArticle from "./components/SingleArticle";
 import NewsPage from "./components/NewsData";
 import AdminLoginPage from "./routes/AdminLoginPage";
-import AdminNews from "./components/AdminNews";
+import AdminNews from "./components/AdminAddNews";
 import AdminDashboard from "./components/AdminDashboard";
+import AdminAddNews from "./components/AdminAddNews";
+import NewsDetail from "./components/NewsDetail";
+import NewsList from "./components/NewsList";
  function App ()  {
     return (
         <div className="App">
@@ -28,8 +31,11 @@ import AdminDashboard from "./components/AdminDashboard";
                 <Route path ="/admin-login" element ={<AdminLoginPage/>}/>
                 <Route path ="/searchbar" element ={<SearchBar/>}/>
                 <Route path="/city/:city" element={<CityPage />} />
-                <Route path="/admin/news" element={<AdminNews />} />
+                <Route path="/admin/news" element={<AdminAddNews />} />
                 <Route path="/article/:slug" element={<SingleArticle />} />
+
+                <Route path="/news" element={<NewsList />} />
+                <Route path="/news/:id" element={<NewsDetail />} />
 
                 <Route path="/admin1" element={<AdminDashboard />} />
             </Routes>

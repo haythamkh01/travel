@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import HomeInterface from "../components/HomeInterface";
 import ArticlePreview from "../components/NewsSection";
 import NewsSection from "../components/NewsSection";
+import NewsList from "../components/NewsList";
 
 function Home () {
     return (
@@ -23,6 +24,7 @@ function Home () {
               */ }
             <HomeInterface/>
             {/*<Destination/>*/}
+            <NewsList/>
              <NewsSection/>
             <Trip/>
             <Footer/>
