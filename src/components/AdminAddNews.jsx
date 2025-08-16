@@ -19,24 +19,23 @@ export default function AdminAddNews() {
         e.preventDefault();
         setSubmitting(true);
         setMsg("");
+
         try {
             const fd = new FormData();
             fd.append("title", title);
             fd.append("content", content);
             if (image) fd.append("image", image);
 
-            // Prefer adminToken if it already includes "Bearer "
-            const adminToken = localStorage.getItem("adminToken"); // e.g. "Bearer eyJ..."
-            const rawToken   = localStorage.getItem("token");      // e.g. "eyJ..."
-            const authHeader = adminToken || (rawToken ? `Bearer ${rawToken}` : "");
+            const token = localStorage.getItem("token");
+            if (!token) throw new Error("Not logged in");
 
-            const res = await fetch("http://localhost:8080/api/admin/news", { // <-- full backend URL
+            const res = await fetch("http://localhost:8080/api/admin/news", {
                 method: "POST",
-                headers: { Authorization: authHeader },
-                body: fd, // don't set Content-Type when using FormData
+                headers: { Authorization: `Bearer ${token}` },
+                body: fd, // don't set Content-Type with FormData
             });
 
-            if (!res.ok) throw new Error(await res.text() || `HTTP ${res.status}`);
+            if (!res.ok) throw new Error(`${res.status} ${await res.text()}`);
             const data = await res.json();
             setMsg(`Created ✔ id: ${data.id}`);
             setTitle(""); setContent(""); setImage(null); setPreview(null);

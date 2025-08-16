@@ -19,6 +19,7 @@ import AdminDashboard from "./components/AdminDashboard";
 import AdminAddNews from "./components/AdminAddNews";
 import NewsDetail from "./components/NewsDetail";
 import NewsList from "./components/NewsList";
+import AdminContactMessages from "./components/AdminContactMessages";
  function App ()  {
     return (
         <div className="App">
@@ -30,6 +31,7 @@ import NewsList from "./components/NewsList";
                 <Route path ="/signup" element ={<SignUp/>}/>
                 <Route path ="/admin-login" element ={<AdminLoginPage/>}/>
                 <Route path ="/searchbar" element ={<SearchBar/>}/>
+                <Route path="/admin/messages" element={<AdminContactMessages />} />
                 <Route path="/city/:city" element={<CityPage />} />
                 <Route path="/admin/news" element={<AdminAddNews />} />
                 <Route path="/article/:slug" element={<SingleArticle />} />
@@ -37,7 +39,7 @@ import NewsList from "./components/NewsList";
                 <Route path="/news" element={<NewsList />} />
                 <Route path="/news/:id" element={<NewsDetail />} />
 
-                <Route path="/admin1" element={<AdminDashboard />} />
+                <Route path="/admin" element={<AdminDashboard />} />
             </Routes>
 
 

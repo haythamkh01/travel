@@ -85,3 +85,7 @@
     }
 
 }
+/* in ContactUsStyles.css */
+.alert { margin: 12px 0; padding: 10px; background:#eef; border:1px solid #99c; border-radius:6px; }
+.error { color:#c00; display:block; margin-top:4px; }
+.invalid { border-color:#c00 !important; }
