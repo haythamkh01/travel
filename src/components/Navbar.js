@@ -23,7 +23,7 @@ function Navbar() {
     return (
         <nav className="NavbarItems">
 
-            <h1 className="navbar-logo">TRAVEL</h1>
+            <h1 className="navbar-logo">Wander Quest</h1>
 
 
             <ul className="nav-menu">
