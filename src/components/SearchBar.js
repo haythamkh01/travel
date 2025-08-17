@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaSearch, FaTimes } from "react-icons/fa";
-import "./searchBar.css";
+
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
